@@ -31,10 +31,10 @@ function App() {
  let [centers,setCenters]=useState([{"title":"Sample"}]);
 
 let allCenters=function(){
-  axios.get("http://127.0.0.1:8000/api/all").then(res=>{setCenters(res.data);})
+  axios.get("https://covidtestcenterapi.herokuapp.com/api/all").then(res=>{setCenters(res.data);})
 }
 let districtCenters=function(district){
-  axios.get("http://127.0.0.1:8000/api/district?district="+district).then(res=>{setCenters(res.data)})
+  axios.get("https://covidtestcenterapi.herokuapp.com/api/district?district="+district).then(res=>{setCenters(res.data)})
 }
  useEffect(()=>{
   allCenters();
