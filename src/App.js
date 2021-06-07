@@ -53,7 +53,7 @@ let districtCenters=function(district){
     <Checkbox checked={false} onClick={themeChanger}>Dark Mode</Checkbox>
     </Container> 
     <Spacer x={30}></Spacer>
-    
+    <Text h3>Enter Your District</Text>
     <ReactHTMLDatalist
             name={"district"}
             
@@ -78,7 +78,7 @@ let districtCenters=function(district){
             ]}
       />
       <Spacer x={30}/>
-      <Button onClick={showCenters}>Click me</Button>
+      <Button onClick={showCenters}>Submit</Button>
       <Spacer x={10}></Spacer>
       <Grid.Container gap={2} justify="center">
             {centers?.map(function(center){return <Center title={center.name} address={center.address}
