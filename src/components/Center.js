@@ -7,6 +7,8 @@ import ReactHTMLDatalist from "react-html-datalist";
 
 
 export default (props)=>{
+    // let map_url='https://www.google.co.in/maps/@'+props.latitude+','+props.longitude+"15z";
+    let map_url="https://maps.google.com/?q="+props.latitude+","+props.longitude;
     return(
         <Grid xs={8}>
             <Card shadow>
@@ -17,8 +19,8 @@ export default (props)=>{
                 <p>Lab Type : {props.lab_type}</p>
                 <p>Latitude : {props.latitude}</p>
                 <p>Longitude : {props.longitude}</p>
-                <Row justify="center"></Row>
-        
+                <Row justify="center"><a href={map_url}><Button type='secondary'>Location</Button></a></Row>
+                
             </Card>
         </Grid>
     )
